@@ -1,0 +1,65 @@
+[
+  {
+    "objects": ["sky", "grass", "zebra"],
+    "relationships": [
+      [0, "above", 1],
+      [2, "standing on", 1]
+    ]
+  },
+  {
+    "objects": ["sky", "grass", "sheep"],
+    "relationships": [
+      [0, "above", 1],
+      [2, "standing on", 1]
+    ]
+  },
+  {
+    "objects": ["sky", "grass", "sheep", "sheep"],
+    "relationships": [
+      [0, "above", 1],
+      [2, "standing on", 1],
+      [3, "by", 2]
+    ]
+  },
+  {
+    "objects": ["sky", "grass", "sheep", "sheep", "tree"],
+    "relationships": [
+      [0, "above", 1],
+      [2, "standing on", 1],
+      [3, "by", 2],
+      [4, "behind", 2]
+    ]
+  },
+  {
+    "objects": ["sky", "grass", "sheep", "sheep", "tree", "ocean"],
+    "relationships": [
+      [0, "above", 1],
+      [2, "standing on", 1],
+      [3, "by", 2],
+      [4, "behind", 2],
+      [5, "by", 4]
+    ]
+  },
+  {
+    "objects": ["sky", "grass", "sheep", "sheep", "tree", "ocean", "boat"],
+    "relationships": [
+      [0, "above", 1],
+      [2, "standing on", 1],
+      [3, "by", 2],
+      [4, "behind", 2],
+      [5, "by", 4],
+      [6, "in", 5]
+    ]
+  },
+  {
+    "objects": ["sky", "grass", "sheep", "sheep", "tree", "ocean", "boat"],
+    "relationships": [
+      [0, "above", 1],
+      [2, "standing on", 1],
+      [3, "by", 2],
+      [4, "behind", 2],
+      [5, "by", 4],
+      [6, "on", 1]
+    ]
+  }
+]

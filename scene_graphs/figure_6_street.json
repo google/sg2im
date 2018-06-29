@@ -1,0 +1,69 @@
+[
+  {
+    "objects": ["car", "street", "line", "sky"],
+    "relationships": [
+      [0, "on", 1],
+      [2, "on", 1],
+      [3, "above", 1]
+    ]
+  },
+  {
+    "objects": ["bus", "street", "line", "sky"],
+    "relationships": [
+      [0, "on", 1],
+      [2, "on", 1],
+      [3, "above", 1]
+    ]
+  },
+  {
+    "objects": ["bus", "street", "line", "sky", "car"],
+    "relationships": [
+      [0, "on", 1],
+      [2, "on", 1],
+      [3, "above", 1],
+      [4, "on", 1]
+    ]
+  },
+  {
+    "objects": ["bus", "street", "line", "sky", "car", "kite"],
+    "relationships": [
+      [0, "on", 1],
+      [2, "on", 1],
+      [3, "above", 1],
+      [4, "on", 1],
+      [5, "in", 3]
+    ]
+  },
+  {
+    "objects": ["bus", "street", "line", "sky", "car", "kite"],
+    "relationships": [
+      [0, "on", 1],
+      [2, "on", 1],
+      [3, "above", 1],
+      [4, "on", 1],
+      [5, "in", 3],
+      [4, "below", 5]
+    ]
+  },
+  {
+    "objects": ["bus", "street", "line", "sky", "car", "building"],
+    "relationships": [
+      [0, "on", 1],
+      [2, "on", 1],
+      [3, "above", 1],
+      [4, "on", 1],
+      [5, "behind", 1]
+    ]
+  },
+  {
+    "objects": ["bus", "street", "line", "sky", "car", "building", "window"],
+    "relationships": [
+      [0, "on", 1],
+      [2, "on", 1],
+      [3, "above", 1],
+      [4, "on", 1],
+      [5, "behind", 1],
+      [6, "on", 5]
+    ]
+  }
+]

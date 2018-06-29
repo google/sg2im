@@ -1,0 +1,81 @@
+[
+  {
+    "objects": [
+      "car", "car", "cage", "person", "grass", "tree", "playingfield", "person"
+    ],
+    "relationships": [
+      [0, "left of", 1],
+      [0, "above", 6],
+      [1, "above", 4],
+      [3, "left of", 7],
+      [5, "above", 7],
+      [6, "below", 2],
+      [6, "below", 3],
+      [7, "left of", 4]
+    ]
+  },
+  {
+    "objects": [ "broccoli", "broccoli", "vegetable", "carrot"],
+    "relationships": [
+      [0, "left of", 1],
+      [0, "left of", 1],
+      [1, "inside", 2],
+      [3, "below", 1]
+    ]
+  },
+  {
+    "objects": ["person", "person", "person", "fence"],
+    "relationships": [
+      [0, "left of", 1],
+      [0, "left of", 1],
+      [0, "inside", 3],
+      [2, "inside", 3]
+    ]
+  },
+  {
+    "objects": ["sky-other", "person", "skateboard", "tree"],
+    "relationships": [
+      [0, "surrounding", 2],
+      [1, "inside", 0],
+      [1, "above", 3],
+      [3, "below", 0]
+    ]
+  },
+  {
+    "objects": ["person", "tie", "wall-panel", "clothes"],
+    "relationships": [
+      [0, "surrounding", 1],
+      [1, "inside", 0],
+      [1, "above", 3],
+      [2, "surrounding", 0]
+    ]
+  },
+  {
+    "objects": ["clouds", "tree", "person", "horse", "grass"],
+    "relationships": [
+      [0, "above", 4],
+      [0, "above", 4],
+      [1, "right of", 2],
+      [2, "left of", 3],
+      [3, "above", 4]
+    ]
+  },
+  {
+    "objects": ["elephant", "elephant", "tree", "grass"],
+    "relationships": [
+      [0, "inside", 2],
+      [0, "above", 3],
+      [2, "surrounding", 1]
+    ]
+  },
+  {
+    "objects": ["clouds", "building-other", "boat", "tree", "river"],
+    "relationships": [
+      [0, "above", 1],
+      [0, "above", 1],
+      [1, "above", 4],
+      [3, "left of", 4],
+      [4, "below", 0]
+    ]
+  }
+]
