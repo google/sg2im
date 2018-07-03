@@ -147,9 +147,9 @@ def lsgan_d_loss(scores_real, scores_fake):
 
 def gradient_penalty(x_real, x_fake, f, gamma=1.0):
   N = x_real.size(0)
-  eps = torch.randn(N, 1, 1, 1).type_as(x_real.data)
-  x_hat = eps * x_real.data + (1 - eps) * x_fake.data
-  x_hat = Variable(x_hat, requires_grad=True)
+  device, dtype = x_real.device, x_real.dtype
+  eps = torch.randn(N, 1, 1, 1, device=device, dtype=dtype)
+  x_hat = eps * x_real + (1 - eps) * x_fake
   x_hat_score = f(x_hat)
   if x_hat_score.dim() > 1:
     x_hat_score = x_hat_score.view(x_hat_score.size(0), -1).mean(dim=1)

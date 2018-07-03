@@ -54,9 +54,9 @@ def _init_conv(layer, method):
   if method == 'default':
     return
   elif method == 'kaiming-normal':
-    nn.init.kaiming_normal(conv.weight)
+    nn.init.kaiming_normal(layer.weight)
   elif method == 'kaiming-uniform':
-    nn.init.kaiming_uniform(conv.weight)
+    nn.init.kaiming_uniform(layer.weight)
 
 
 class Flatten(nn.Module):
