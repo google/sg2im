@@ -16,6 +16,7 @@
 
 import torch
 import torch.nn.functional as F
+from torch.autograd import Variable
 
 
 def get_gan_losses(gan_type):
