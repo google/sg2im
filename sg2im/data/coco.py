@@ -278,7 +278,7 @@ class CocoSceneGraphDataset(Dataset):
       mx1 = max(mx0 + 1, mx1)
       my1 = max(my0 + 1, my1)
       mask = mask[my0:my1, mx0:mx1]
-      mask = imresize(255 * mask, (self.mask_size, self.mask_size),
+      mask = imresize(255.0 * mask, (self.mask_size, self.mask_size),
                       mode='constant')
       mask = torch.from_numpy((mask > 128).astype(np.int64))
       masks.append(mask)
