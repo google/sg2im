@@ -84,10 +84,10 @@ class VgSceneGraphDataset(Dataset):
 
     # Figure out which objects appear in relationships and which don't
     obj_idxs_with_rels = set()
-    obj_idxs_without_rels = set(range(self.data['objects_per_image'][index]))
+    obj_idxs_without_rels = set(range(self.data['objects_per_image'][index].item()))
     for r_idx in range(self.data['relationships_per_image'][index]):
-      s = self.data['relationship_subjects'][index, r_idx]
-      o = self.data['relationship_objects'][index, r_idx]
+      s = self.data['relationship_subjects'][index, r_idx].item()
+      o = self.data['relationship_objects'][index, r_idx].item()
       obj_idxs_with_rels.add(s)
       obj_idxs_with_rels.add(o)
       obj_idxs_without_rels.discard(s)
@@ -108,8 +108,8 @@ class VgSceneGraphDataset(Dataset):
     boxes = torch.FloatTensor([[0, 0, 1, 1]]).repeat(O, 1)
     obj_idx_mapping = {}
     for i, obj_idx in enumerate(obj_idxs):
-      objs[i] = self.data['object_names'][index, obj_idx]
-      x, y, w, h = self.data['object_boxes'][index, obj_idx]
+      objs[i] = self.data['object_names'][index, obj_idx].item()
+      x, y, w, h = self.data['object_boxes'][index, obj_idx].tolist()
       x0 = float(x) / WW
       y0 = float(y) / HH
       x1 = float(x + w) / WW
@@ -121,12 +121,12 @@ class VgSceneGraphDataset(Dataset):
     objs[O - 1] = self.vocab['object_name_to_idx']['__image__']
 
     triples = []
-    for r_idx in range(self.data['relationships_per_image'][index]):
+    for r_idx in range(self.data['relationships_per_image'][index].item()):
       if not self.include_relationships:
         break
-      s = self.data['relationship_subjects'][index, r_idx]
-      p = self.data['relationship_predicates'][index, r_idx]
-      o = self.data['relationship_objects'][index, r_idx]
+      s = self.data['relationship_subjects'][index, r_idx].item()
+      p = self.data['relationship_predicates'][index, r_idx].item()
+      o = self.data['relationship_objects'][index, r_idx].item()
       s = obj_idx_mapping.get(s, None)
       o = obj_idx_mapping.get(o, None)
       if s is not None and o is not None:
